@@ -1,0 +1,16 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	double p,s;
+	int m=0;
+	cin >> p;
+	p /= 100;
+	p++;
+	for (s = 1000; s < 1100;s*=p) {
+		m++;
+	}
+	cout << "Через "<< m <<" месяцев вклад будет больше 1100р ("<<s<<"р.)" << endl;
+}
