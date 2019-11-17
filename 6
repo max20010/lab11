@@ -1,17 +1,25 @@
-#include "pch.h"
-#include <iostream>
+#include "stdafx.h"
+#include "iostream"
 using namespace std;
+
 int main()
 {
-	setlocale(LC_ALL, "ru");
-	int n,f=0,i=1,x=1,c=1;
-	cin >> n;
-	for (; n >= f;) {
-		i = f;
-		f=x+i;
-		x = f;
-		c++;
+setlocale(LC_ALL, "ru");
+int x, f = 1, n[2] = {1,1}, i = 0,s=1;
+cin >> x;
+if (x != 1) {
+	while (f < x)
+	{
+	n[0] = f;
+	f = s;
+	n[1] = f;
+	s = n[0] + n[1];
+	i++;
 	}
-	cout << c << endl;
-	return 0;
+}
+else
+{	
+i = 1;
+}
+cout << i << endl;
 }
